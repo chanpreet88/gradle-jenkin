@@ -1,4 +1,4 @@
-node {
+node builder {
   def myGradleContainer = docker.image('gradle:jdk8')
   myGradleContainer.pull()
   stage('prep') {
