@@ -6,7 +6,7 @@ node {
     checkout scm
   }
   stage('build') {
-     myGradleContainer.inside("-v ${env.HOME}/.gradle:/home/gradle/.gradle") {
+     myGradleContainer.inside("-v /var/jenkins_home/.gradle:/home/gradle/.gradle") {
        sh 'cd complete && ./gradlew build'
      }
   }
